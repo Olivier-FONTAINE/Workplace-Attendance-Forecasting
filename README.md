@@ -36,9 +36,9 @@ Your Time and Attendance solution can calculate daily counters of workplace atte
 
                    WorkPlace Attendance = Planned Work Schedule
 
-                                                           ➖ Absences 
+                                          ➖ Absences 
 
-                                                           ➖ Offsite Attendances 
+                                          ➖ Offsite Attendances 
 
 ➕ TIME MANAGEMENT:
 
