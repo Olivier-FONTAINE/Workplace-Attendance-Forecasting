@@ -1,5 +1,7 @@
 # Workplace-Attendance-Forecasting with Facebook Prophet
 
+![Workplace-Attendance-Forecasting with Facebook Prophet](04-Images/WP%20attendance%20steampunk.jpg?raw=true "Workplace-Attendance-Forecasting with Facebook Prophet")
+
 This repo shows how you can leverage facebook prophet package to forecast workplace attendance.
 
 📈 Forecasting workplace attendance allow businesses to right-size their investment in office space with confidence. It can also be an input for other types of Corporate forecastings i.e. number of meals to be served at the corporate restaurant.
@@ -97,14 +99,51 @@ The final dataset contains 3 columns:
     Work Place attendance (per day)
     Headcount (on that day)
     
- # EXPLORATORY DATA ANALYSIS (EDA)
+# EXPLORATORY DATA ANALYSIS (EDA)
  
- ## Overview
+## Overview
  
  The following chart shows:
 
     the daily workplace attendance (in blue)
     the monthly headcount (in orange)
   
-  ![Original time series](04-Images/1-Original%20time%20series.png?raw=true "Original time series")
+  ![Workplace attendance & headcount (Dec 21 - Jan 23)](04-Images/1-Original%20time%20series.png?raw=true "Workplace attendance & headcount (Dec 21 - Jan 23)")
 
+💡 At first sight, we observe the following:
+
+    a weekly seasonality.
+    the impact of at least 3 holiday periods Christmas 2021, Summer 2022 and Christmas 2022.
+    a yearly seasonality On December/Janaury, the only months that appear twice.
+    
+## Week analysis
+
+Let's visualize the mean of workplace attendance per week day:
+
+![Workplace attendance mean for each week day (Monday to Sunday)](04-Images/3-Week%20analysis.png?raw=true "Workplace attendance mean for each week day (Monday to Sunday)")
+
+💡 There are limited workplace attendance during week-end days.
+
+💡 There are slight differences between the usual working days:
+
+    Mondays and Fridays are the days with less people in the office
+    Tuesdays, Wednesdays and Thursdays with more people in the office
+
+No big surprises here!
+
+This dataset does no contain information on the reasons behind the absence at the work place. In your company/organization, you can get this information from your Time & Attendance solution.
+
+You can have less people in the office on Fridays because your staff:
+
+    🏡 work from home
+    🌴 are on leaves
+    🤒 are absent (sick...)
+    ...
+    
+## Working days time series
+
+We want to forecast the workplace attendance on working days only, so we get rid of saturdays and sundays.
+
+Let's visualize the new time series:
+
+![Workplace attendance & headcount (Dec 21 - Jan 23))](04-Images/2-Time%20series%20wo%20WE%20days.png?raw=true "WWorkplace attendance & headcount (Dec 21 - Jan 23)")
