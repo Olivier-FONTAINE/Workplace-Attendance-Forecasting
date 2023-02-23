@@ -1,4 +1,4 @@
-# Workplace-Attendance-Forecasting with Facebook Prophet
+# Workplace Attendance Forecasting with Facebook Prophet
 
 ![Workplace-Attendance-Forecasting with Facebook Prophet](04-Images/WP%20attendance%20steampunk.jpg?raw=true "Workplace-Attendance-Forecasting with Facebook Prophet")
 
@@ -146,4 +146,64 @@ We want to forecast the workplace attendance on working days only, so we get rid
 
 Let's visualize the new time series:
 
-![Workplace attendance & headcount (Dec 21 - Jan 23))](04-Images/2-Time%20series%20wo%20WE%20days.png?raw=true "WWorkplace attendance & headcount (Dec 21 - Jan 23)")
+![Workplace attendance & headcount (Dec 21 - Jan 23))](04-Images/2-Time%20series%20wo%20WE%20days.png?raw=true "Workplace attendance & headcount (Dec 21 - Jan 23)")
+
+💡 Now, without weekend days, 
+
+    it is more difficult to observe the weekly frequency
+    but now we are able to observe sudden decreases during the year that are not linked to weekends. They are probably linked to public holidays on working days. 
+    
+# FORECASTING MODELING
+
+Now, it is time to build several forecasting models with different parameters and find the best one according to a given metric.
+
+In order to evaluate those models,
+
+    we will train them on a whole year period from 1 Dec 2021 to 30 Nov 22.
+    we will evaluate their workplace attendance predictions against real Workplace attendance from 1 Dec 2022 until 24 Jan 23 (end of dataset).
+
+## 1. Baseline model with weekly & yearly seasonality
+
+As observed during the Exploratory Data Analysis, the time series has:
+
+    weekly seasonality
+    yearly seasonality
+
+Let's build this baseline model with these 2 seasonalities. After model training, forecasting on the last period, let's plot the forecast.
+
+![1. Baseline model with weekly & yearly seasonality](04-Images/4-1st%20model.png?raw=true "1. Baseline model with weekly & yearly seasonality")
+      
+How to read the results:
+
+    The black dots are the real values
+    The blue line is the prediction
+    The blue shades are the uncertainty interval
+
+💡 The overall prediction looks quite good but we do have:
+
+    quit a lot of real points far from the prediction (not necessarly that bad because we don't want overfitting)
+    a few outliers (very far from the prediction)
+
+In addition to the forecast plot, Prophet also provides the components plot.
+
+![1. Baseline model with weekly & yearly seasonality - COMPONENTS](04-Images/5-1st%20model-comp.png?raw=true "1. Baseline model with weekly & yearly seasonality - COMPONENTS")
+
+💡 From this component plot chart, we can see that:
+
+    the workplace attendance has an overall upward trend.
+    the weekly seasonality shows that the workplace attendance tends to be lower at the beginning and end of the working.
+    the yearly seasonality shows different movements and we can observe more easily the possible impacts of vacations periods.
+
+➡️ The mean absolute percent error (MAPE) for this model is 20%, meaning that on average, the forecast is off by 20% of the real workplace attendance.
+
+## 2. Multivariate model
+
+From an HR perspective, the headcount has an impact on the workplace attendance (predictor). So, we can add this parameter to the previous model.
+
+➡️ It becomes a multivariate model.
+
+![2. Multivariate model (with headcount predictor)](04-Images/6-2nd%20model%20multivariate.png?raw=true "2. Multivariate model (with headcount predictor)")
+  
+![22. Multivariate model (with headcount regressor) COMPONENTS)](04-Images/7-2nd%20model%20multivariate-comp.png?raw=true "2. Multivariate model (with headcount regressor) COMPONENTS")
+
+➡️ The mean absolute percent error (MAPE) for this model is 15% which is better than the previous model (20%).
