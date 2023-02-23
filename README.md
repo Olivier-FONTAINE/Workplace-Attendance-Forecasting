@@ -1,4 +1,4 @@
-# Workplace-Attendance-Forecasting
+# Workplace-Attendance-Forecasting with Facebook Prophet
 
 This repo shows how you can leverage facebook prophet package to forecast workplace attendance.
 
