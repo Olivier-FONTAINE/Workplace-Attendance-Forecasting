@@ -105,5 +105,6 @@ The final dataset contains 3 columns:
 
     the daily workplace attendance (in blue)
     the monthly headcount (in orange)
-    
   
+  ![Original time series](04-Images/1-Original%20time%20series.png?raw=true "Original time series")
+
