@@ -207,3 +207,49 @@ From an HR perspective, the headcount has an impact on the workplace attendance 
 ![22. Multivariate model (with headcount regressor) COMPONENTS)](04-Images/7-2nd%20model%20multivariate-comp.png?raw=true "2. Multivariate model (with headcount regressor) COMPONENTS")
 
 ➡️ The mean absolute percent error (MAPE) for this model is 15% which is better than the previous model (20%).
+
+## 3. Model with public holidays & vacation periods
+
+Besides seasonalities and additional predictors, we will now include public holidays and vacation periods to the previous model and see how it impacts the model predictions.
+
+We add:
+
+    FR (French) public holiday calendar
+    French public vacation periods, actually France is divided into 3 areas for vacation, we use "Zone C" vacation periods for Paris
+
+Let's plot the forecast:
+
+![3. Model with public holidays & vacation periods)](04-Images/8-3rd%20model%20with%20public%20holidays.png?raw=true "3. Model with public holidays & vacation periods")
+
+💡 It's getting better:
+
+    the vacaction periods are better fitted
+    the public holidays as well, the blue prediction line is closer to the black point now
+
+Let's plot the components now:
+
+![3. Model with public holidays & vacation periods COMPONENTS)](04-Images/9-3rd%20model%20with%20public%20holidays-comp.png?raw=true "3. Model with public holidays & vacation periods COMPONENTS")
+
+➡️ The mean absolute percent error (MAPE) for this model is 12% which is better than previous models (respectively 15% and 20%).
+
+# SUMMARY
+
+Forecasting workplace attendance was made easy by using Prophet. It was indeed quite easy and fast to implement the baseline model + extra parameters such as:
+
+    Current headcount as an additional predictor
+    Public holidays & vaction periods
+
+By the way, in production, forecasting the headcount will help forecasting the workplace attendance. You might get some help from your Workforce Planning solution if you have any.
+
+➡️ Results were interpretable, thank to the components plot
+
+➡️ Results were quite good.
+
+Now, the dataset was not large enough to predict accurately the yearly seasonality and Prophet is known to work best with several seasons of historical data (3 years would be best).
+
+It is also possible to dive into additional model fine tuning.
+
+As always, the challenge will be to put the model in production and follow how it behave.
+
+Finally, this Prophet models should also be compared with others such as SARIMA, tree based models or neural network models.
+
