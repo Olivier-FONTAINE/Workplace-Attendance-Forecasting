@@ -36,9 +36,9 @@ Your Time & Attendance solution can calculate daily counters of workplace attend
 
                    WorkPlace Attendance = Planned Work Schedule
 
-                                                           ➖ Absences 
+                                         ➖ Absences 
 
-                                                           ➖ Offsite Attendances 
+                                         ➖ Offsite Attendances 
 
 ➕ TIME MANAGEMENT:
 
@@ -66,7 +66,7 @@ In this article, we use Facebook Prophet, a forecasting package in both R and Py
 
 # DATASET
 
-## Original Dataset (read or go directly to final dataset below)
+## Original Dataset (read or go directly to dataset below)
 
 📌 Due to the confidentiality of HR data, it is already quite difficult to find HR datasets. It is even more complicated with HR time-series-based dataset...
 
