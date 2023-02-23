@@ -7,7 +7,7 @@ This repo shows how you can leverage facebook prophet package to forecast workpl
 ## Repository structure
 
 The repository is structured that way:
-- [01 - Data Scraping from OpenDataParis] (01-Data%20Scraping/Data%20scraping%20from%20OpenDataParis.ipynb)
+- 01 - Data Scraping from OpenDataParis
 - 02 - Workplace Attendance dataset
 - 03 - Workplace Attendance Forecasting
 
