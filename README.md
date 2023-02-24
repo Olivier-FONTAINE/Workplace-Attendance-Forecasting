@@ -234,12 +234,12 @@ Let's plot the components now:
 
 # SUMMARY
 
-Forecasting workplace attendance was made easy by using Prophet. It was indeed quite easy and fast to implement the baseline model + extra parameters such as:
+ 💡 Forecasting workplace attendance was made easy by using Prophet. It was indeed quite easy and fast to implement the baseline model + extra parameters such as:
 
     Current headcount as an additional predictor
     Public holidays & vaction periods
 
-By the way, in production, forecasting the headcount will help forecasting the workplace attendance. You might get some help from your Workforce Planning solution if you have any.
+👉 By the way, in production, forecasting the headcount will help forecasting the workplace attendance. You might get some help from your Workforce Planning solution if you have any.
 
 ➡️ Results were interpretable, thank to the components plot
 
@@ -247,9 +247,10 @@ By the way, in production, forecasting the headcount will help forecasting the w
 
 Now, the dataset was not large enough to predict accurately the yearly seasonality and Prophet is known to work best with several seasons of historical data (3 years would be best).
 
-It is also possible to dive into additional model fine tuning.
+🛠 It is also possible to dive into additional model fine tuning.
 
-As always, the challenge will be to put the model in production and follow how it behave.
+🚀As always, the challenge will be to put the model in production and follow how it behave. Such models would have been very impacted by COVID or post COVID times.
 
-Finally, this Prophet models should also be compared with others such as SARIMA, tree based models or neural network models.
+🕑 The other usual challenge is the data quality but usually Time & Attendance data have a high quality because their recording have legal and payroll impacts and they are closely monitored by HR departments. I can tell by experience as I have been supporting companies/organizations for 8 years as @SAP HCM consultant, expert on Time management for clients such as Nestlé, BNP Paribas Personal Finance or Volvo Finland Ab.
 
+📊 Finally, this Prophet models should also be compared with others such as SARIMA, tree based models or neural network models. 
