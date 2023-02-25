@@ -159,8 +159,8 @@ Now, it is time to build several forecasting models with different parameters an
 
 In order to evaluate those models,
 
-    we will train them on a whole year period from 1 Dec 2021 to 30 Nov 22.
-    we will evaluate their workplace attendance predictions against real Workplace attendance from 1 Dec 2022 until 24 Jan 23 (end of dataset).
+    I will train them on a whole year period from 1 Dec 2021 to 30 Nov 22.
+    I will evaluate the workplace attendance predictions against real workplace attendance from 1 Dec 2022 until 24 Jan 23 (end of dataset).
 
 ## 1. Baseline model with weekly & yearly seasonality
 
