@@ -251,6 +251,6 @@ Now, the dataset was not large enough to predict accurately the yearly seasonali
 
 🚀As always, the challenge will be to put the model in production and follow how it behave. Such models would have been very impacted by COVID or post COVID times.
 
-🕑 The other usual challenge is the data quality but usually Time & Attendance data have a high quality because their recording have legal and payroll impacts and they are closely monitored by HR departments. I can tell by experience as I have been supporting companies/organizations for 8 years as @SAP HCM consultant, expert on Time management for clients such as Nestlé, BNP Paribas Personal Finance or Volvo Finland Ab.
+🕑 The other usual challenge is the data quality but usually Time & Attendance data have a high quality because their recording have legal and payroll impacts and they are closely monitored by HR departments. I can tell this from my experience as @SAP HCM consultant, expert on time management, during 8 years for clients such as Nestlé, BNPP or Volvo AB.
 
 📊 Finally, this Prophet models should also be compared with others such as SARIMA, tree based models or neural network models. 
